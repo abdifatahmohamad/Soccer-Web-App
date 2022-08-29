@@ -20,7 +20,8 @@ const AddEdit = () => {
 
   useEffect(() => {
     axios
-      .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
+      // .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
+      .get(`https://new-soccerdb.herokuapp.com/api/get/${id}`)
       .then((resp) => setState({ ...resp.data[0] }));
   }, [id]);
 
@@ -31,7 +32,8 @@ const AddEdit = () => {
     } else {
       if (!id) {
         axios
-          .post("https://e-soccer-crud.herokuapp.com/api/post", {
+          // .post("https://e-soccer-crud.herokuapp.com/api/post", {
+          .post("https://new-soccerdb.herokuapp.com/api/post", {
             name,
             stadium,
           })
@@ -42,7 +44,8 @@ const AddEdit = () => {
         toast.success("Team Added Successfully");
       } else {
         axios
-          .put(`https://e-soccer-crud.herokuapp.com/api/update/${id}`, {
+          // .put(`https://e-soccer-crud.herokuapp.com/api/update/${id}`, {
+          .put(`https://new-soccerdb.herokuapp.com/api/update/${id}`, {
             name,
             stadium,
           })

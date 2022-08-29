@@ -10,7 +10,8 @@ const View = () => {
 
   useEffect(() => {
     axios
-      .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
+      // .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
+      .get(`https://new-soccerdb.herokuapp.com/api/get/${id}`)
       .then((resp) => setTeam({ ...resp.data[0] }));
   }, [id]);
   return (
