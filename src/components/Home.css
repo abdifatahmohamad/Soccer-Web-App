@@ -96,9 +96,10 @@ body{
     color: #000;
 }
 
-.btn-contact{
+.btn-add-team{
     background-color: #e82764;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .m-t{

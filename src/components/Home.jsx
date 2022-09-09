@@ -50,7 +50,7 @@ const Home = () => {
             Finally, we can <strong>DELETE</strong> any exiting team information from the database by just using delete button.
         </p>
       <Link to="/addTeam">
-        <button className="btn btn-contact">Add Team</button>
+        <button className="btn btn-add-team">Add Team</button>
       </Link>
 
       <table className="styled-table">
