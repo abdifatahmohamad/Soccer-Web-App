@@ -11,7 +11,7 @@ const View = () => {
   useEffect(() => {
     axios
       // .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
-      .get(`https://new-soccerdb.herokuapp.com/api/get/${id}`)
+      .get(`http://3.21.35.191:5000/api/get/${id}`)
       .then((resp) => setTeam({ ...resp.data[0] }));
   }, [id]);
   return (

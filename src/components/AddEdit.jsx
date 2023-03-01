@@ -21,7 +21,7 @@ const AddEdit = () => {
   useEffect(() => {
     axios
       // .get(`https://e-soccer-crud.herokuapp.com/api/get/${id}`)
-      .get(`https://new-soccerdb.herokuapp.com/api/get/${id}`)
+      .get(`http://3.21.35.191:5000/api/get/${id}`)
       .then((resp) => setState({ ...resp.data[0] }));
   }, [id]);
 
@@ -33,7 +33,7 @@ const AddEdit = () => {
       if (!id) {
         axios
           // .post("https://e-soccer-crud.herokuapp.com/api/post", {
-          .post("https://new-soccerdb.herokuapp.com/api/post", {
+          .post("http://3.21.35.191:5000/api/post", {
             name,
             stadium,
           })
@@ -45,7 +45,7 @@ const AddEdit = () => {
       } else {
         axios
           // .put(`https://e-soccer-crud.herokuapp.com/api/update/${id}`, {
-          .put(`https://new-soccerdb.herokuapp.com/api/update/${id}`, {
+          .put(`http://3.21.35.191:5000/api/update/${id}`, {
             name,
             stadium,
           })

@@ -9,7 +9,7 @@ const Home = () => {
 
   const loadData = async () => {
     // const response = await axios.get("https://e-soccer-crud.herokuapp.com/api/get");
-    const response = await axios.get("https://new-soccerdb.herokuapp.com/api/get");
+    const response = await axios.get("http://3.21.35.191:5000/api/get");
     setData(response.data);
   };
 
@@ -34,7 +34,7 @@ const Home = () => {
       window.confirm("Are you sure that you wanted to delete that team ?")
     ) {
       // axios.delete(`https://e-soccer-crud.herokuapp.com/api/remove/${id}`);
-      axios.delete(`https://new-soccerdb.herokuapp.com/api/remove/${id}`);
+      axios.delete(`http://3.21.35.191:5000/api/remove/${id}`);
       toast.success("Team Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }
